@@ -1,13 +1,13 @@
 # Running Spin Apps on Kubernetes with SpinKube
 
-In this module we will deploy our first Spin App to Kubernetes and make ourselfs familiar with supporting technologies, practices and commands. By the end of this module you'll have mastered the following objectives:
+In this module we will deploy our first Spin App to Kubernetes and familiarize ourself with supporting technologies, practices and commands. By the end of this module you will:
 
 - Understand how Spin Apps are distributed
-- Examinated a Spin App distributable
-- Run a Spin App locally using its distributable
-- Scaffolded a `SpinApp` CR with custom settings
-- Deployed a `SpinApp` to Kubernetes
-- Discovered Kubernetes primitives managed by Spin Operator
+- Examine how to distribute a Spin App 
+- Run a Spin App locally using its OCI Artifact
+- Scaffold a `SpinApp` CR with custom settings
+- Deploy a `SpinApp` to Kubernetes
+- Discover Kubernetes primitives managed by Spin Operator
 
 ## What is a Spin App
 
@@ -25,7 +25,7 @@ The open source project [Spin](https://github.com/fermyon/spin) streamlines the 
 - `http-ts`: HTTP request handler using Typescript
 - `http-zig`: HTTP request handler using Zig
 
-Once you've create a Spin App using one of the templates shown above, you run `spin build` (or `spin b`) to compile the source code into WebAssembly (a `.wasm` file will be created). Additionally, there is the Spin Manifest (`spin.toml`), which holds essential metadata - such as the actual trigger configuration - of the Spin App.
+Once you've create a Spin App using one of the templates shown above, you can run `spin build` (or `spin b`) to compile the source code into WebAssembly (a `.wasm` file will be created). Additionally, there is the Spin Manifest (`spin.toml`), which holds essential metadata - such as the actual trigger configuration - of the Spin App.
 
 Spin Apps are distributed using OCI artifacts. An OCI artifact of a Spin App consists of the `.wasm` file and the `spin.toml`, meaning it consists of everything that is required to run a particular app in different environments. OCI artifacts can be distributed through popular registries like Docker Hub, or hosted offerings such as Azure Container Registry (ACR), Amazon Elastic Container Registry (Amazon ECR), GCP Artifact Registry, or others.
 
@@ -37,7 +37,7 @@ Writing Spin Apps from scratch is beyond the scope of this workshop, instead you
 
 The `spin` CLI provides necessary commands for packaging and distributing Spin Apps through public and private registries.
 
-Let's package and distribute the [`simple-app`](../apps/simple-app/) using the anonymous and ephemeral registry [ttl.sh](https://ttl.sh). When using ttl.sh, you specify how long the OCI artifact should remain available using the tag of the artifact. (The `12h` tag tells ttl.sh to keep the corresponding articat for 12 hours):
+Let's package and distribute the [`simple-app`](../apps/simple-app/) using the anonymous and ephemeral registry [ttl.sh](https://ttl.sh). When using ttl.sh, you specify how long the OCI artifact should remain available using the tag of the artifact. (The `12h` tag tells ttl.sh to keep the corresponding artifact for 12 hours):
 
 ```bash
 # Move to the app directory
@@ -237,7 +237,7 @@ simple-app-2353   5       5         containerd-shim-spin
 
 ## Exploring Kubernetes Primitives managed by Spin Operator
 
-As you've already learned, Spin Operator takes care of creating and managing underlying Kuberntes primitives for your Spin Apps. Upon deploying a new Spin App to Kubernetes, the following resources are created by Spin Operator:
+As you've already learned, Spin Operator takes care of creating and managing underlying Kubernetes primitives for your Spin Apps. Upon deploying a new Spin App to Kubernetes, the following resources are created by Spin Operator:
 
 - A Kubernetes `Deployment`
 - A Kubernetes `Pod` per desired `replica` (`DeploymentSpec.Replicas`)
