@@ -1,10 +1,10 @@
-# Setting up SpinKubes
+# Setting up SpinKube
 
-In this module we'll explore the building blocks of SpinKube and guide your through the process of setting up SpinKube on a Kubernetes cluster. By the end of this module you will have mastered the following objectives:
+In this module we'll explore the building blocks of SpinKube and guide your through the process of setting up SpinKube on a Kubernetes cluster. By the end of this module you will have:
 
-- Understand the building blocks and components of SpinKube
-- Deployed necessary dependencies of SpinKube
-- Being able to determine if a particular Kubernetes cluster can run SpinKube
+- Understood the building blocks and components of SpinKube
+- Deployed the necessary dependencies of SpinKube
+- The ability to determine if a particular Kubernetes cluster can run SpinKube
 - Deployed SpinKube to a Kubernetes cluster
 - Applied segmentation to distribute WebAssembly workloads on particular Kubernetes worker nodes
 
