@@ -2,7 +2,7 @@
 
 Welcome to the [SpinKube](http://spinkube.dev) workshop!
 
-We are thrilled to have you join this workshop on SpinKube, in which we'll discover how you can run serverless WebAssembly workloads natively on your Kubernetes cluster. Although this is an instructure-led workshop, excercises are included to deepen your knowledge in the realm of SpinKube and to get some practical experience on your own pace.
+We are thrilled to have you join this workshop on SpinKube, in which you'll discover how to run serverless WebAssembly workloads natively on your Kubernetes cluster. Although this is an instructure-led workshop, excercises are included to deepen your knowledge in the realm of SpinKube and to get some practical experience on your own pace.
 
 Currently, there are four workshop modules:
 
