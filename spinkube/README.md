@@ -1,0 +1,2 @@
+This is a WIP hands-on self-guided workshop to learn how to deploy WebAssebmly applications on Kubernetes using [SpinKube](https://www.spinkube.dev/). 
+This workshop is aimed for the DevOps / Platform Engineering / SRE segment and does not focus on the creation of WebAssembly applications. To learn about building a full-stack Wasm app, check out this [workshop](https://github.com/fermyon/workshops/tree/main/magic-8-ball)
