@@ -1,0 +1,8 @@
+apiVersion: core.spinoperator.dev/v1alpha1
+kind: SpinApp
+metadata:
+  name: simple-app-2353
+spec:
+  image: "ttl.sh/simple-app-2353:12h"
+  executor: containerd-shim-spin
+  replicas: 5
